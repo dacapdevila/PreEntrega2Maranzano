@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "PDRPT", sans-serif;
+}
+
+/* INICIO HEADER */
+
+.container_navbar {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0.5rem 0.5rem;
+  grid-auto-flow: row;
+  justify-items: center;
+  align-items: stretch;
+  grid-template-areas: "container_logo_pulseras links_navbar boton_contacto";
+  background-color: black;
+  padding: 1rem 1rem 1rem 1rem;
+  border-bottom: solid #e40b7f 0.5rem;
+}
+
+.container_logo_pulseras {
+  justify-self: start;
+  align-self: center;
+  grid-area: container_logo_pulseras;
+  margin-left: 3rem;
+}
+
+.container_logo_pulseras a img {
+  width: 50%;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.container_logo_pulseras a img:hover {
+  -webkit-filter: drop-shadow(1px 1px 0 #0088a9)
+    drop-shadow(-1px -1px 2px #0088a9);
+  filter: drop-shadow(1px 1px 2px #0088a9) drop-shadow(-1px -1px 2px #0088a9);
+  transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  -moz-transform: rotate(15deg);
+  transition-duration: 0.5s;
+}
+
+.container_links_navbar {
+  justify-self: center;
+  align-self: center;
+  grid-area: links_navbar;
+}
+
+.container_links_navbar li {
+  display: inline-block;
+  padding: 0rem 2rem;
+}
+
+.container_links_navbar li a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 4rem;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+.container_links_navbar li a:hover {
+  text-decoration: underline #e40b7f;
+  letter-spacing: 0.2rem;
+  transition: 0.5s;
+}
+
+.container_boton_contacto {
+  justify-self: end;
+  align-self: center;
+  grid-area: boton_contacto;
+  margin-right: 2rem;
+}
+
+.container_boton_contacto a button {
+  padding: 9px 25px;
+  color: #ffffff;
+  font-family: "PDRPT", sans-serif;
+  background-color: #0088a9;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 4rem;
+  transition: 0.5s;
+}
+
+.container_boton_contacto a button:hover {
+  background-color: #e40b7f;
+  text-decoration: underline;
+  letter-spacing: 0.2rem;
+  transition: 0.5s;
+}
+
+#pagina_actual {
+  padding: 0.7rem;
+  border: solid #e40b7f;
+  text-decoration: none;
+}
+
+#pagina_actual:hover {
+  text-decoration: none;
+}
+
+/* FIN HEADER */

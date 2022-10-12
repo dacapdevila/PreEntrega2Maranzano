@@ -1,0 +1,425 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Mister Twisted', sans-serif;
+}
+
+/* INICIO HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.container_navbar {  
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0.5rem 0.5rem;
+  grid-auto-flow: row;
+  justify-items: center;
+  align-items: stretch;
+  grid-template-areas: "container_logo_pulseras links_navbar boton_contacto";
+  background-color: black;
+  padding: 1rem 1rem 1rem 1rem;
+  border-bottom: solid #e40b7f 0.5rem;
+}
+
+.container_logo_pulseras {
+  justify-self: start;
+  align-self: center;
+  grid-area: container_logo_pulseras;
+  margin-left: 3rem;
+}
+
+.container_logo_pulseras a img {
+  width: 50%;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.container_logo_pulseras a img:hover {
+  -webkit-filter: drop-shadow(1px 1px 0 #0088a9)
+    drop-shadow(-1px -1px 2px #0088a9);
+  filter: drop-shadow(1px 1px 2px #0088a9) drop-shadow(-1px -1px 2px #0088a9);
+  transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  -moz-transform: rotate(15deg);
+  transition-duration: 0.5s;
+}
+
+.container_links_navbar {
+  justify-self: center;
+  align-self: center;
+  grid-area: links_navbar;
+}
+
+.container_links_navbar li {
+  display: inline-block;
+  padding: 0rem 2rem;
+}
+
+.container_links_navbar li a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 3rem;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+.container_links_navbar li a:hover {
+  text-decoration: underline #e40b7f;
+  letter-spacing: 0.2rem;
+  transition: 0.5s;
+}
+
+.container_boton_contacto {
+  justify-self: end;
+  align-self: center;
+  grid-area: boton_contacto;
+  margin-right: 2rem;
+}
+
+.container_boton_contacto a button {
+  padding: 9px 25px;
+  color: #ffffff;
+  font-family: 'Mister Twisted', sans-serif;
+  background-color: #0088a9;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 4rem;
+  transition: 0.5s;
+}
+
+.container_boton_contacto a button:hover {
+  background-color: #e40b7f;
+  text-decoration: underline;
+  letter-spacing: 0.2rem;
+  transition: 0.5s;
+}
+
+#pagina_actual {
+  padding: 0.7rem;
+  border: solid #e40b7f;
+  text-decoration: none;
+}
+
+#pagina_actual:hover {
+  text-decoration: none;
+}
+
+#pagina_contacto_activa {
+  border: solid #e40b7f;
+}
+
+
+/* FIN HEADER */
+
+/* INICIO FOOTER */
+
+footer {
+  background-color: #0088a9;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: 3rem 3rem 3rem 3rem;
+  border-top: solid #000000 1rem;
+}
+
+.contactanos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contactanos h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #000000;
+  text-shadow: 2px 2px 2px #e40b7f;
+}
+
+.logos_footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.logos_footer img {
+  width: 70%;
+  filter: grayscale(100);
+  transition: 0.5s;
+}
+
+.logos_footer img:hover {
+  filter: grayscale(0);
+  transition: 0.5s;
+}
+
+.ubicacion {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.ubicacion a {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  color: #000000;
+  text-shadow: 2px 2px 2px #e40b7f;
+}
+
+.ubicacion a:hover {
+  text-decoration: underline;
+}
+
+/* FIN FOOTER */
+
+/* INICIO BODY .HTML */
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #0088a9;
+  border-bottom: solid #e40b7f;
+}
+
+.video_principal {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-top: 2rem;
+  border-bottom: 2rem;
+  border: solid 1rem #000000;
+  border-radius: 0.5rem;
+  transform: scale(0.8);
+  transition-duration: 0.5s;
+}
+
+.video_principal:hover {
+  transform: scale(1);
+  transition-duration: 0.5s;
+}
+
+.texto_principal {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  margin-left: 15rem;
+  margin-right: 15rem;
+  margin-top: 15rem;
+  margin-bottom: 15rem;
+}
+
+.texto_principal h1 {
+  padding: 2rem;
+  margin-bottom: 5rem;
+  font-size: 7rem;
+  background-color: #e40b7f;
+  color: #ffffff;
+  letter-spacing: 10px;
+  text-shadow: 0px 0px 8px #0088a9;
+}
+
+.texto_principal p {
+  padding: 2rem;
+  font-size: 5rem;
+}
+
+.fotos_principal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 10rem;
+  margin-bottom: 15rem;
+}
+
+.fotos_principal img {
+  width: 40%;
+  margin: 2rem;
+  border-radius: 1rem;
+  border: solid 0.2rem #000000;
+  transition: 0.5s;
+}
+
+/* FIN BODY .HTML */
+
+/* INICIO CONTACTO.HTML */
+
+.container_formulario {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 20rem;
+}
+
+form {
+  width: 40%;
+  text-align: center;
+  display: inline-block;
+  margin: 3rem;
+}
+
+form label,
+form input,
+form p {
+  font-size: 3rem;
+  width: 100%;
+  display: block;
+  padding: 2rem;
+}
+
+form p {
+  margin-bottom: 4rem;
+  font-size: 4rem;
+}
+
+form label:hover,
+form p:hover {
+  text-decoration: underline solid #e40b7f;
+}
+
+.formato_input {
+  font-size: 3rem;
+  font-family: 'Mister Twisted', sans-serif;
+  color: #e40b7f;
+}
+
+.container_botones_formulario {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+div button {
+  padding: 9px 25px;
+  color: #ffffff;
+  background-color: #0088a9;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: "VTCBadDrip", sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+div button:hover {
+  background-color: #e40b7f;
+  text-decoration: underline;
+}
+
+/* FIN CONTACTO.HTML */
+
+/* INICIO PRODUCTOS.HTML */
+
+.container_tarjetas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.container_tarjetas div {
+  margin: 2rem;
+  padding: 1rem;
+  display: flex;
+  border: solid #0088a9 1rem;
+}
+
+.container_tarjetas img {
+  width: 70%;
+}
+
+.container_tarjetas p {
+  display: inline;
+  margin: 0.5rem;
+  font-size: 2rem;
+}
+
+/* FIN PRODUCTOS.HTML */
+
+/*INICIO QUIENES-SOMOS.HTML */
+
+.container_quienes_somos {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.container_quienes_somos img {
+  width: 50%;
+  margin-top: 15rem;
+  margin-bottom: 5rem;
+}
+
+.container_quienes_somos p {
+  width: 60%;
+  font-size: 3rem;
+  margin-bottom: 10rem;
+}
+
+/* FIN QUIENES-SOMOS.HTML */
+
+/* INICIO PRINCIPALES-CLIENTES.HTML */
+
+.container_principal_principales_clientes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+}
+
+.container_hijo_principales_clientes {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: flex-start;
+}
+
+.container_hijo_principales_clientes img {
+  margin: 3rem;
+  transition: 0.5s;
+}
+
+.container_hijo_principales_clientes img:hover {
+  scale: 1.1;
+  transition: 0.5s;
+}
