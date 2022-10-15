@@ -6,7 +6,8 @@
 
 html {
   font-size: 62.5%;
-  font-family: 'Mister Twisted', sans-serif;
+  font-family: "Mister Twisted", sans-serif;
+  height: 100%;
 }
 
 /* INICIO HEADER */
@@ -17,7 +18,7 @@ header {
   z-index: 1;
 }
 
-.container_navbar {  
+.container_navbar {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: 1fr;
@@ -39,7 +40,7 @@ header {
 }
 
 .container_logo_pulseras a img {
-  width: 50%;
+  max-width: calc(6vw + 6vh + 3vmin);
   cursor: pointer;
   transition-duration: 0.5s;
 }
@@ -67,8 +68,7 @@ header {
 
 .container_links_navbar li a {
   text-decoration: none;
-  font-weight: 500;
-  font-size: 3rem;
+  font-size: calc(0.9vw + 0.9vh + 0.9vmin);
   color: #ffffff;
   transition: 0.5s;
 }
@@ -89,13 +89,13 @@ header {
 .container_boton_contacto a button {
   padding: 9px 25px;
   color: #ffffff;
-  font-family: 'Mister Twisted', sans-serif;
+  font-family: "Mister Twisted", sans-serif;
   background-color: #0088a9;
   border: none;
   border-radius: 50px;
   cursor: pointer;
   font-weight: 500;
-  font-size: 4rem;
+  font-size: calc(1vw + 1vh + 1vmin);
   transition: 0.5s;
 }
 
@@ -119,7 +119,6 @@ header {
 #pagina_contacto_activa {
   border: solid #e40b7f;
 }
-
 
 /* FIN HEADER */
 
@@ -199,6 +198,7 @@ footer {
 }
 
 .video_principal {
+  max-width: 100%;
   margin-top: 2rem;
   margin-bottom: 2rem;
   border-top: 2rem;
@@ -210,8 +210,9 @@ footer {
 }
 
 .video_principal:hover {
-  transform: scale(1);
+  transform: scale(0.95);
   transition-duration: 0.5s;
+  border: solid 1rem #ffffff;
 }
 
 .texto_principal {
@@ -304,7 +305,7 @@ form p:hover {
 
 .formato_input {
   font-size: 3rem;
-  font-family: 'Mister Twisted', sans-serif;
+  font-family: "Mister Twisted", sans-serif;
   color: #e40b7f;
 }
 
